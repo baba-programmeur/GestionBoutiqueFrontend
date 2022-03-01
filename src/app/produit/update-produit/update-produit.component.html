@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div>
+   <h3>Modifier Le produit</h3>
+
+    </div>
+    <form>
+      <div class="col-sm-2 col-md-2 col-md-2">
+        <label for="nom">Nom:</label>
+        <input type="text" class="form-control" [(ngModel)]="currentProduit.name" name="nomProduit">
+      </div>   
+      
+      <div class="col-sm-2 col-md-2 col-md-2">
+        <label for="prix">Prix:</label>
+        <input type="number" class="form-control" [(ngModel)]="currentProduit.price" name="prixProduit">
+      </div>    
+      <div class="col-sm-2 col-md-2 col-md-2">
+        <label for="pwd">Quantite</label>
+        <input type="number"class="form-control" [ngModel]="currentProduit.quantity" name="quantite" (ngModelChange)="currentProduit.quantity">
+      
+    </div>    
+    <div class="mt-2">
+
+    <button type ="submit" class="btn btn-primary" (click)="update()">Modifier</button>
+</div>
+    </form>
+
+</div>
